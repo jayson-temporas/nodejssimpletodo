@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Temp's todo list</title>
+	<link rel="stylesheet" href="/assets/css/bootstrap.css">
+	<link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+	<div class="container">
+		<h3 class="text-center">Temp's Todo</h3>
+		<div id="todo-list">
+			<form method="POST">
+				<div class="row">
+					<div class="col-md-8">
+						<div class="form-group">
+							<input type="text" name="name" class="form-control" placeholder="Add New Item...">
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<input class="btn btn-primary" type="submit" name="submit" value="Add Item">
+						</div>
+					</div>
+				</div>
+			</form>
+
+			<ul class="list-group">
+				<% for(var i = 0; i < todos.length; i++){%>
+				<li class="list-group-item">
+					<%= todos[i].item %>
+				</li>
+				<% } %>
+			</ul>
+		</div>
+	</div>
+	<script src="/assets/scripts/jquery.js"></script>
+	<script src="/assets/scripts/todo-list.js"></script>
+</body>
+</html>
